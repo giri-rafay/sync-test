@@ -1,15 +1,15 @@
 apiVersion: security.k8smgmt.io/v3
-kind: ClusterNetworkPolicyRule
+kind: NamespaceNetworkPolicyRule
 metadata:
-  name: git-rl1
+  name: xwing-block
   project: giri
 spec:
   artifact:
     artifact:
       paths:
-      - name: file://artifacts/git-rl1/cluster-wide.yaml
+      - name: file://artifacts/xwing-block/xwing-block-rule.yaml
     options: {}
     type: Yaml
   sharing:
     enabled: false
-  version: test-culster
+  version: version11
