@@ -1,0 +1,13 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicyRule
+metadata:
+  name: example-rule-upload
+  project: giri
+spec:
+  artifact:
+    artifact: {}
+    options: {}
+    type: Yaml
+  sharing:
+    enabled: false
+  version: example-version

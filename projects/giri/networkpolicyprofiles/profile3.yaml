@@ -1,0 +1,11 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NetworkPolicyProfile
+metadata:
+  name: profile3
+  project: giri
+spec:
+  installationParams:
+    policyEnforcementMode: default
+  sharing:
+    enabled: false
+  version: v3

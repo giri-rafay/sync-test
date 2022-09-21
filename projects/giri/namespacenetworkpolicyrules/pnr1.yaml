@@ -1,0 +1,15 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicyRule
+metadata:
+  name: pnr1
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/pnr1/xwing-block-rule.yaml
+    options: {}
+    type: Yaml
+  sharing:
+    enabled: false
+  version: vv

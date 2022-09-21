@@ -1,0 +1,6 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicyRule
+metadata:
+  name: git-rl1
+  project: giri
+spec: {}

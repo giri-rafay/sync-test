@@ -1,0 +1,12 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: p1
+  project: giri
+spec:
+  rules:
+  - name: xwing-block
+    version: version11
+  sharing:
+    enabled: false
+  version: v1

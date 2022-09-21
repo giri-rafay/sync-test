@@ -1,0 +1,15 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicyRule
+metadata:
+  name: delete-rule1
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/delete-rule1/xwing-block-rule.yaml
+    options: {}
+    type: Yaml
+  sharing:
+    enabled: false
+  version: delete-v1

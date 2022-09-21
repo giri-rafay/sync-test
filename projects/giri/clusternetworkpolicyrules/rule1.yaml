@@ -1,0 +1,15 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicyRule
+metadata:
+  name: rule1
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/rule1/cluster-wide.yaml
+    options: {}
+    type: Yaml
+  sharing:
+    enabled: false
+  version: rule-version1

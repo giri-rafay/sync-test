@@ -1,0 +1,12 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: pnp1
+  project: giri
+spec:
+  rules:
+  - name: pnr1
+    version: vv
+  sharing:
+    enabled: false
+  version: v1

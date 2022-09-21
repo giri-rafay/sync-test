@@ -1,0 +1,12 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: delete-policy1
+  project: giri
+spec:
+  rules:
+  - name: delete-rule1
+    version: delete-v1
+  sharing:
+    enabled: false
+  version: delete-version11
