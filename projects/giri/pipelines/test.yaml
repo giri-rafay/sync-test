@@ -12,8 +12,13 @@ spec:
       destinationRepo:
         repository: sync
         revision: main
+      gitToSystemSync: true
       includedResources:
       - name: '*'
+      sourceAsDestination: true
+      sourceRepo:
+        repository: sync
+        revision: main
       systemToGitSync: true
     name: test
     type: SystemSync
