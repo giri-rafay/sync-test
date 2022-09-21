@@ -1,0 +1,17 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: ws1
+  project: giri
+spec:
+  drift:
+    enabled: false
+  limitRange:
+    container: {}
+    pod: {}
+  networkPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-rafay-eks
+  resourceQuotas: {}

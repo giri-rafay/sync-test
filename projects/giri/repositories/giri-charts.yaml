@@ -1,0 +1,16 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: giri-charts
+  project: giri
+spec:
+  agents:
+  - {}
+  credentials:
+    password: sealed://credentials.password
+    username: gprasath
+  endpoint: https://github.com/giri-rafay/charts.git
+  options: {}
+  secret:
+    name: file://artifacts/giri-charts/sealed-secret.yaml
+  type: Git

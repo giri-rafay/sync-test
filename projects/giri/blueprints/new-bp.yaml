@@ -1,0 +1,29 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: new-bp
+  project: giri
+spec:
+  base:
+    name: default
+    version: 1.18.0
+  customAddons:
+  - name: new-addon
+    version: nginx
+  defaultAddons:
+    csiSecretStoreConfig:
+      providers: {}
+    enableIngress: true
+    enableLogging: false
+    enableMonitoring: true
+    enableVM: false
+  drift:
+    enabled: false
+  meshRef: {}
+  networkPolicy: {}
+  opaPolicy: {}
+  placement: {}
+  sharing:
+    enabled: false
+  type: custom
+  version: version2

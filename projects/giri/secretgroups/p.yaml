@@ -1,0 +1,6 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: SecretGroup
+metadata:
+  name: p
+  project: giri
+spec: {}

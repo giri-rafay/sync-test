@@ -1,0 +1,33 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: lanntn0-system-sync-unstructure-repo
+  project: giri
+spec:
+  active: true
+  sharing:
+    enabled: false
+  stages:
+  - config:
+      destinationRepo: {}
+      gitToSystemSync: true
+      includedResources:
+      - name: Cluster
+      sourceAsDestination: true
+      sourceRepo:
+        path:
+          name: qc-clusters
+        repository: lanntn0-system-sync
+        revision: main
+    name: system-sync-cluster
+    type: SystemSync
+  triggers:
+  - config:
+      repo:
+        paths:
+        - name: qc-clusters
+        provider: Github
+        repository: lanntn0-system-sync
+        revision: main
+    name: system-sync-cluster
+    type: Webhook

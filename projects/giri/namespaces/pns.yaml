@@ -1,0 +1,21 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: pns
+  project: giri
+spec:
+  drift:
+    enabled: false
+  limitRange:
+    container: {}
+    pod: {}
+  networkPolicyParams:
+    networkPolicyEnabled: true
+    policies:
+    - name: pnp1
+      version: v1
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-rafay-eks
+  resourceQuotas: {}

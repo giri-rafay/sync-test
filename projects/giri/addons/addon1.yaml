@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: addon1
+  project: giri
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/addon1/postgresql-11.0.8.tgz
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: message
+  sharing:
+    enabled: false
+  version: version4

@@ -1,0 +1,16 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: sync
+  project: giri
+spec:
+  agents:
+  - name: agent1
+  credentials:
+    password: sealed://credentials.password
+    username: giri-rafay
+  endpoint: https://github.com/giri-rafay/sync-test.git
+  options: {}
+  secret:
+    name: file://artifacts/sync/sealed-secret.yaml
+  type: Git

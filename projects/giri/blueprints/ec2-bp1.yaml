@@ -1,0 +1,33 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: ec2-bp1
+  project: giri
+spec:
+  base:
+    name: default
+    version: 1.18.0
+  defaultAddons:
+    csiSecretStoreConfig:
+      providers: {}
+    enableIngress: true
+    enableLogging: false
+    enableMonitoring: true
+    enableVM: false
+  drift:
+    enabled: false
+  meshRef: {}
+  networkPolicy:
+    enabled: true
+    policies:
+    - name: policy1
+      version: version1
+    profile:
+      name: default
+      version: latest
+  opaPolicy: {}
+  placement: {}
+  sharing:
+    enabled: false
+  type: custom
+  version: version1

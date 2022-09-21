@@ -1,0 +1,19 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: test
+  project: giri
+spec:
+  active: true
+  sharing:
+    enabled: false
+  stages:
+  - config:
+      destinationRepo:
+        repository: sync
+        revision: main
+      includedResources:
+      - name: '*'
+      systemToGitSync: true
+    name: test
+    type: SystemSync

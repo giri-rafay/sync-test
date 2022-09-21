@@ -1,0 +1,16 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: lanntn0-system-sync
+  project: giri
+spec:
+  agents:
+  - name: gitops-agent-giri-eks
+  credentials:
+    password: sealed://credentials.password
+    username: lanntn0
+  endpoint: https://github.com/lanntn0/rafay-system-sync.git
+  options: {}
+  secret:
+    name: file://artifacts/lanntn0-system-sync/sealed-secret.yaml
+  type: Git

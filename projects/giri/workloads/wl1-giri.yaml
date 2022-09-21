@@ -1,0 +1,18 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: wl1-giri
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/wl1-giri/wl1-giri.yaml
+    options: {}
+    type: Yaml
+  drift:
+    enabled: false
+  namespace: cilium-test
+  placement:
+    selector: rafay.dev/clusterName=giri-eks1-qc
+  version: wl1-giri-v1

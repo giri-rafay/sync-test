@@ -1,0 +1,11 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: helm-istio
+  project: giri
+spec:
+  agents:
+  - {}
+  endpoint: https://istio-release.storage.googleapis.com/charts
+  options: {}
+  type: Helm

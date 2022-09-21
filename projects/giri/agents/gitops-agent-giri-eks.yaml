@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: gitops-agent-giri-eks
+  project: giri
+spec:
+  active: true
+  cluster:
+    name: giri-rafay-eks
+  type: Cluster
+  version: r1.17.0
