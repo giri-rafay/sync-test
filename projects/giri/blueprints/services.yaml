@@ -4,19 +4,31 @@ metadata:
   name: services
   project: giri
 spec:
+  base:
+    name: default
+    version: 1.18.0
   defaultAddons:
     csiSecretStoreConfig:
       providers: {}
-    enableIngress: false
+    enableIngress: true
     enableLogging: false
-    enableMonitoring: false
+    enableMonitoring: true
     enableVM: false
   drift:
     enabled: false
-  meshRef: {}
-  networkPolicy: {}
+  meshRef:
+    enabled: true
+    profile:
+      name: istio-profile-minimal
+      version: version-1663753625
+  networkPolicy:
+    enabled: true
+    profile:
+      name: default
+      version: latest
   opaPolicy: {}
   placement: {}
   sharing:
     enabled: false
   type: custom
+  version: version1
