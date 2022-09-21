@@ -5,7 +5,7 @@ metadata:
   project: giri
 spec:
   blueprintConfig:
-    name: new-bp
+    name: ec2-bp1
     version: version1
   cloudCredentials: new
   config:
